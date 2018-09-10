@@ -72,6 +72,7 @@ a {
     overflow: hidden;
     transition: all .5s;
     z-index: 5;
+    box-shadow:0 2px 8px -3px rgba(0,0,0,.5);
 }
 .icon-gouwuche1{
     line-height: 40px;
@@ -110,11 +111,14 @@ a {
     /*float:left;*/
 
 /*}*/
-
+nav{
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
 .nav{
     width: 1226px;
     height: 100px;
-    /*background: red;*/
     margin: 0 auto;
 }
 .logo{
@@ -127,7 +131,6 @@ a {
 .list{
     width: 620px;
     height: 100%;
-    /*background: yellow;*/
     display: block;
     float: left;
     margin-left: 180px;
@@ -135,7 +138,6 @@ a {
 .search{
     width: 296px;
     height: 50px;
-    /*background: yellow;*/
     float: right;
     margin-top: 25px;
 }
@@ -149,7 +151,45 @@ li{
     font-size: 16px;
     color: #333333;
 }
-
+.nav-xxk{
+    width: 100%;
+    height: 0;
+    position: absolute;
+    background: #fff;
+    top: 100px;
+    z-index: 999;
+    border-top: 2px solid #fafafa;
+}
+.list-xxk{
+    width: 1226px;
+    height: 100%;
+    margin: 0 auto;
+    display: none;
+}
+.list-xxk>li{
+    width: 202px;
+    height: 100%;
+    border-left: 1px solid #fafafa;
+    border-right: 1px solid #fafafa;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.list-xxk>li>img{
+    width: auto;
+    height: 140px;
+    margin-top: 30px;
+}
+.list-xxk>li>p{
+    font-size: 14px;
+    color: #777;
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+}
 /*小米闪购样式*/
 .scroll{
     width: 1226px;
@@ -174,6 +214,9 @@ li{
     height: 24px;
     float: right;
     margin-top: 25px;
+}
+.scroll-topright:hover{
+    cursor: pointer;
 }
 
 .scroll-topright1-1{
@@ -335,7 +378,6 @@ li{
     position: absolute;
     top: 0;
     left:0;
-    z-index: 5;
 }
 .banner img{
     display: block;
@@ -697,11 +739,12 @@ li{
     height: 360px;
     /*background: red;*/
     margin: 10px auto;
+    overflow: hidden;
 }
 .push-bottom{
-    width: 1226px;
+    width: 3720px;
     height: 300px;
-    /*background: green;*/
+    transition: all 1.5s;
 }
 .push-list{
     width: 234px;
